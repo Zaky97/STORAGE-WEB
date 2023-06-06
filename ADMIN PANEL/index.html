@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Storage</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="mt-4" style="font-family: 'Roboto', sans-serif">Z Library</h1>
+
+      <div class="mb-3">
+        <form id="upload-form">
+          <div class="mb-3">
+            <input type="file" class="form-control" id="file-input" />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="category-input"
+              placeholder="Category"
+            />
+          </div>
+
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary" id="upload-button">
+              Upload
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="search-input"
+          placeholder="Search file..."
+        />
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Category</th>
+              <th>Download</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="file-list"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Firebase && app.js scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
